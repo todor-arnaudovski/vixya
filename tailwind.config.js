@@ -9,6 +9,7 @@ export default {
       colors: {
         primary: "#1aa17b",
         light: "#727272",
+        danger: "#ef4444",
       },
       zIndex: {
         999: "999",

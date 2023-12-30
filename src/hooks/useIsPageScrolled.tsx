@@ -12,8 +12,6 @@ export const useIsPageScrolled = () => {
   useEffect(() => {
     window.addEventListener("scroll", scrollHandler);
 
-    console.log("isScrolled", isScrolled);
-
     return () => {
       window.removeEventListener("scroll", scrollHandler);
     };

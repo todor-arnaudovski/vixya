@@ -43,8 +43,14 @@ export const SetupPage = () => {
   const CurrentStepComponent = steps[currentStepIndex].component;
   const navigate = useNavigate();
 
+  const resetState = () => {
+    set_isPrevDisabled(false);
+    set_isNextDisabled(false);
+  };
+
   const onPrevStepHandler = () => {
     if (currentStepIndex > 0) {
+      resetState();
       set_currentStepIndex(currentStepIndex - 1);
     } else {
       navigate("/");
@@ -53,6 +59,7 @@ export const SetupPage = () => {
 
   const onNextStepHandler = () => {
     if (currentStepIndex < steps.length - 1) {
+      resetState();
       set_currentStepIndex(currentStepIndex + 1);
     } else {
       navigate("/setup");

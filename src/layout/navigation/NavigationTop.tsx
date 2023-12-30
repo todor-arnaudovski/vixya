@@ -10,8 +10,6 @@ export const NavigationTop = (props: NavigationTopProps) => {
   const { children } = props;
   const { isScrolled } = useIsPageScrolled();
 
-  console.log("isScrolled", isScrolled);
-
   return (
     <div
       className={classNames(

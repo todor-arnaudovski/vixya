@@ -23,23 +23,25 @@ export const NumberInput = (props: NumberInputProps) => {
   };
 
   return (
-    <div className={classNames("flex flex-col", className)}>
-      {label && (
-        <label className="text-white" htmlFor={name}>
-          {label}
-        </label>
-      )}
-      <input
-        type="number"
-        className="placeholder:text-gray-300 rounded-xl p-3"
-        style={{ textAlign: "inherit", fontWeight: "inherit" }}
-        name={name}
-        value={value}
-        step={1}
-        onChange={onChange}
-        onKeyDown={onKeyDownHandler}
-        {...(placeholder && { placeholder })}
-      />
-    </div>
+    <>
+      <div className={classNames("flex flex-col", className)}>
+        {label && (
+          <label className="text-white" htmlFor={name}>
+            {label}
+          </label>
+        )}
+        <input
+          type="number"
+          className="placeholder:text-gray-300 rounded-xl p-3"
+          style={{ textAlign: "inherit", fontWeight: "inherit" }}
+          name={name}
+          value={value}
+          step={1}
+          onChange={onChange}
+          onKeyDown={onKeyDownHandler}
+          {...(placeholder && { placeholder })}
+        />
+      </div>
+    </>
   );
 };
