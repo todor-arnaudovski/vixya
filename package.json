@@ -1,6 +1,7 @@
 {
   "name": "vixya-react",
-  "private": false,
+  "homepage": "https://todor-arnaudovski.github.io/vixya/",
+  "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
