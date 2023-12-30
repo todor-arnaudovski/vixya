@@ -53,7 +53,7 @@ export const SetupPage = () => {
       resetState();
       set_currentStepIndex(currentStepIndex - 1);
     } else {
-      navigate("/");
+      navigate(import.meta.env.BASE_URL || "/");
     }
   };
 
@@ -62,7 +62,7 @@ export const SetupPage = () => {
       resetState();
       set_currentStepIndex(currentStepIndex + 1);
     } else {
-      navigate("/setup");
+      navigate(`${import.meta.env.BASE_URL}setup` || "setup");
     }
   };
 

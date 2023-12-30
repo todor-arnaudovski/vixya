@@ -8,7 +8,7 @@ export const Finish = () => {
       </HeadingDefault>
       <p className="text-center text-white mb-10">Честитки! Може да започнеме.</p>
       <div className="flex justify-center items-center mb-7">
-        <img src="/images/male-female.png" alt="Male and female" />
+        <img src={`${import.meta.env.BASE_URL}/images/male-female.png`} alt="Male and female" />
       </div>
     </>
   );

@@ -8,7 +8,7 @@ export const GenderInfo = () => {
         Вашиот пол може да го смените во било кое време преку “Поставки”
       </p>
       <div className="flex justify-center items-center mb-7">
-        <img src="/images/phone-settings.png" alt="Phone settings" />
+        <img src={`${import.meta.env.BASE_URL}/images/phone-settings.png`} alt="Phone settings" />
       </div>
     </>
   );

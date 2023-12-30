@@ -2,22 +2,24 @@ import { createBrowserRouter } from "react-router-dom";
 import { Root } from "./Root";
 import { Init, ErrorPage, RegisterPage, SetupPage } from "../pages";
 
+const baseUrl = import.meta.env.BASE_URL;
+
 export const router = createBrowserRouter([
   {
-    path: "/",
+    path: `${baseUrl}`,
     element: <Root />,
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "",
+        path: `${baseUrl}`,
         element: <Init />,
       },
       {
-        path: "register",
+        path: `${baseUrl}register`,
         element: <RegisterPage />,
       },
       {
-        path: "setup",
+        path: `${baseUrl}setup`,
         element: <SetupPage />,
       },
     ],

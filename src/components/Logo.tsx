@@ -1,3 +1,5 @@
+import logo from "../assets/logo.png";
+
 interface LogoProps {
   width: string;
 }
@@ -7,7 +9,7 @@ export const Logo = (props: LogoProps) => {
 
   return (
     <>
-      <img src="/src/assets/logo.png" alt="Vixya logo" style={{ width }} />
+      <img src={logo} alt="Vixya logo" style={{ width }} />
     </>
   );
 };

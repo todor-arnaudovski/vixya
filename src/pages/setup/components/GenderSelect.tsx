@@ -58,7 +58,7 @@ export const GenderSelect = (props: StepComponentProps) => {
             "grayscale brightness-50 scale-75": selectedGender && selectedGender !== "female",
           })}
         >
-          <img src="/images/gender-female.png" alt="Female workout" />
+          <img src={`${import.meta.env.BASE_URL}/images/gender-female.png`} alt="Female workout" />
         </div>
         <div
           className={classNames("transition-all", {
@@ -66,7 +66,7 @@ export const GenderSelect = (props: StepComponentProps) => {
             "grayscale brightness-50 scale-75": selectedGender && selectedGender !== "male",
           })}
         >
-          <img src="/images/gender-male.png" alt="Male workout" />
+          <img src={`${import.meta.env.BASE_URL}/images/gender-male.png`} alt="Male workout" />
         </div>
       </div>
     </>
