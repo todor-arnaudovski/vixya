@@ -41,7 +41,7 @@ export const RegisterPage = () => {
   return (
     <>
       <TopNav onPrevStep={onPrevStepHandler} />
-      <div className="flex flex-col justify-between min-h-screen h-full w-full lg:w-1/2 pt-32 mx-auto">
+      <div className="flex flex-col justify-between min-h-screen h-full w-full lg:w-1/2 pt-28 mx-auto">
         <div className="mb-10">
           <CurrentStepComponent />
         </div>

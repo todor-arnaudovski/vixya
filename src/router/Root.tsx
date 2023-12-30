@@ -5,7 +5,7 @@ import { Container } from "../layout";
 export const Root = () => {
   return (
     <>
-      <div className="bg-main-pattern bg-black min-h-screen min-w-screen">
+      <div className="bg-main-pattern bg-black max-h-screen min-h-screen min-w-screen">
         {/* <div
           className="absolute inset-0 h-full w-full bg-cover bg-center opacity-30"
           style={{ backgroundImage: `url(${patternBackground})` }}

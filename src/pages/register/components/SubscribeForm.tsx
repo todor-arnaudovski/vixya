@@ -51,7 +51,7 @@ export const SubscribeForm = () => {
           value={inputValues.cardNumber}
           onChange={onInputValueChangeHandler}
         />
-        <div className="grid grid-cols-2 gap-5 mb-3">
+        <div className="grid grid-cols-2 gap-5 items-end mb-3">
           <CardExpirationDateInput
             label="Датум на истекување"
             placeholder="MM/YY"
