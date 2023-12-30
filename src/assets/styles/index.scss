@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "variables";
+
+// body {
+//   margin: 0;
+// }
+
+.bg-main-pattern {
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("../../assets/svg/bg-pattern.svg");
+    background-size: 1000px;
+    background-position-x: center;
+    background-repeat: repeat;
+    opacity: 0.3;
+  }
+}
+
+.vertical-dash {
+  position: absolute;
+
+  &:before {
+    content: "";
+    position: absolute;
+    height: 30px;
+    width: 1px;
+    background-color: #fff;
+    inset: 0;
+    transform: translateY(-50%);
+  }
+}
+
+.button {
+  border-radius: 6.25rem;
+
+  &.button-primary {
+    background: linear-gradient(180deg, #0d7872 19.27%, #1f9a5f 100%);
+  }
+
+  &.button-outline {
+    box-shadow: inset 0 0 0 1px #fff;
+    background-color: #000;
+  }
+}
+
+.pill {
+  border-radius: 6.25rem;
+
+  &.pill-primary {
+    background: linear-gradient(180deg, #0d7872 19.27%, #1f9a5f 100%);
+  }
+
+  &.pill-outline {
+    box-shadow: inset 0 0 0 1px #fff;
+    background-color: #000;
+  }
+}
+
+.text-primary {
+  color: $primary-color;
+}
+
+.text-light {
+  color: $light-color;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

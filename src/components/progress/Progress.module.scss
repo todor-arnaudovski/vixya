@@ -1,0 +1,26 @@
+.progress {
+  & .indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #000;
+    border: 2px solid #fff;
+    position: relative;
+
+    &:not(:last-child) {
+      &:before {
+        content: "";
+        position: absolute;
+        top: 2px;
+        left: 7px;
+        width: 43px;
+        height: 2px;
+        background-color: #fff;
+      }
+    }
+
+    &.is-filled {
+      background-color: #fff;
+    }
+  }
+}
