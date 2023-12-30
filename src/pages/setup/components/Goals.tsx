@@ -76,7 +76,7 @@ const goalsList: Goal[] = [
 ];
 
 export const Goals = () => {
-  const [checkedValues, set_checkedValues] = useState<Record<string, string>>();
+  const [checkedValues, set_checkedValues] = useState<Record<string, string>>({});
 
   const onRadioButtonChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.currentTarget;
@@ -92,7 +92,6 @@ export const Goals = () => {
   return (
     <>
       <HeadingDefault className="text-center mb-5">Кои се твоите цели?</HeadingDefault>
-      {console.log(checkedValues)}
       <p className="text-center text-white mb-10">
         Оцени колку ти е важна секоја од следниве категории
       </p>

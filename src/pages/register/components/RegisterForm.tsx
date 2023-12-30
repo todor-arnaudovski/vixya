@@ -21,11 +21,16 @@ const defaultInputValues: InputValues = {
 
 export const RegisterForm = () => {
   const [inputValues, set_inputValues] = useState<InputValues>(defaultInputValues);
+  const [isTOSAccepted, set_isTOSAccepted] = useState(false);
 
   const onInputValueChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.currentTarget;
 
     set_inputValues((prevState) => ({ ...prevState, [name]: value }));
+  };
+
+  const onTOSAcceptedChangeHandler = () => {
+    set_isTOSAccepted(!isTOSAccepted);
   };
 
   const onSubmitHandler = () => {};
@@ -82,12 +87,16 @@ export const RegisterForm = () => {
           value={inputValues.confirmPassword}
           onChange={onInputValueChangeHandler}
         />
-        <label className="flex justify-start gap-3 text-sm text-white">
-          <Checkbox className="self-start mt-1" />
-          <p>
+        <div className="flex justify-start gap-3">
+          <Checkbox
+            className="self-start mt-1"
+            checked={isTOSAccepted}
+            onChange={onTOSAcceptedChangeHandler}
+          />
+          <p className="text-sm text-white">
             Датете согласност на правилата за користење со цел да овозможиме пристап до апликацијата
           </p>
-        </label>
+        </div>
       </Form>
     </>
   );

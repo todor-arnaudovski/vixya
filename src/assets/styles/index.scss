@@ -37,11 +37,19 @@
   }
 }
 
+.border-bottom-light {
+  border-bottom: 1px solid $light-color;
+}
+
+.bg-gradient-primary {
+  background: $gradient-primary;
+}
+
 .button {
   border-radius: 6.25rem;
 
   &.button-primary {
-    background: linear-gradient(180deg, #0d7872 19.27%, #1f9a5f 100%);
+    background: $gradient-primary;
   }
 
   &.button-outline {
@@ -54,7 +62,7 @@
   border-radius: 6.25rem;
 
   &.pill-primary {
-    background: linear-gradient(180deg, #0d7872 19.27%, #1f9a5f 100%);
+    background: $gradient-primary;
   }
 
   &.pill-outline {
@@ -63,13 +71,13 @@
   }
 }
 
-.text-primary {
-  color: $primary-color;
-}
+// .text-primary {
+//   color: $primary-color;
+// }
 
-.text-light {
-  color: $light-color;
-}
+// .text-light {
+//   color: $light-color;
+// }
 
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {

@@ -30,7 +30,7 @@ export const RadioButton = (props: RadioButtonProps) => {
             />
             {item.label && (
               <label
-                className="text-white font-extrabold text-xs uppercase text-light cursor-pointer"
+                className="font-extrabold text-xs uppercase text-light cursor-pointer"
                 htmlFor={`radio-input-${item.name}-${item.value}`}
               >
                 {item.label}

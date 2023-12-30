@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { TopNav } from "./layout";
-import { DateOfBirth, GenderInfo, GenderSelect, Goals } from "./components";
-import { Steps } from "../../components";
+import { DateOfBirth, Finish, GenderInfo, GenderSelect, Goals, Notifications } from "./components";
+import { Button, Steps } from "../../components";
 import { Availability } from "./components/Availability";
 
 const steps = [
@@ -25,6 +25,14 @@ const steps = [
   {
     component: Goals,
     label: "goals",
+  },
+  {
+    component: Notifications,
+    label: "goals",
+  },
+  {
+    component: Finish,
+    label: "finish",
   },
 ];
 
@@ -66,16 +74,22 @@ export const SetupPage = () => {
         <div className="mb-10">
           <CurrentStepComponent setIsNextDisabled={setisNextDisabledHandler} />
         </div>
-        <div className="mb-10">
-          <Steps
-            onPrevStep={onPrevStepHandler}
-            onNextStep={onNextStepHandler}
-            isPrevDisabled={isPrevDisabled}
-            isNextDisabled={isNextDisabled}
-            steps={steps.length}
-            step={currentStepIndex + 1}
-          />
-        </div>
+        {currentStepIndex < steps.length - 1 ? (
+          <div className="mb-10">
+            <Steps
+              onPrevStep={onPrevStepHandler}
+              onNextStep={onNextStepHandler}
+              isPrevDisabled={isPrevDisabled}
+              isNextDisabled={isNextDisabled}
+              steps={steps.length}
+              step={currentStepIndex + 1}
+            />
+          </div>
+        ) : (
+          <div className="mb-20">
+            <Button onClick={onNextStepHandler}>Започни</Button>
+          </div>
+        )}
       </div>
     </>
   );

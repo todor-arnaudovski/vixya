@@ -43,9 +43,10 @@ export const GenderSelect = (props: StepComponentProps) => {
       </div>
       <button onClick={() => onGenderSelectHandler("unknown")} className="block mx-auto mb-10">
         <p
-          className={classNames("text-center text-white uppercase tracking-[0.4rem] text-sm", {
-            "text-primary": selectedGender === "unknown",
-          })}
+          className={classNames(
+            "text-center uppercase tracking-[0.4rem] text-sm",
+            selectedGender === "unknown" ? "text-primary" : "text-white"
+          )}
         >
           Не сакам да кажам
         </p>

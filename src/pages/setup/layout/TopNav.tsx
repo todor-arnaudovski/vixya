@@ -1,9 +1,12 @@
 import { Logo } from "../../../components";
+import { NavigationTop } from "../../../layout";
 
 export const TopNav = () => {
   return (
-    <div className="fixed top-0 inset-x-0 w-full flex justify-center py-5">
-      <Logo width="120px" />
-    </div>
+    <>
+      <NavigationTop>
+        <Logo width="120px" />
+      </NavigationTop>
+    </>
   );
 };

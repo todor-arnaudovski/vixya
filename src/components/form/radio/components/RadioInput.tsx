@@ -20,21 +20,27 @@ export const RadioInput = (props: RadioInputProps) => {
   };
 
   return (
-    <div className="mb-1">
-      <input
-        ref={radioInputRef}
-        className={classNames(styles["radio-input"])}
-        type="radio"
-        id={`radio-input-${name}-${value}`}
-        name={name}
-        value={value}
-        onChange={onChange}
-        checked={checked}
-      />
-      <span
-        onClick={onClickHandler}
-        className={classNames(styles["custom-radio-input"], checked && styles["is-checked"])}
-      />
-    </div>
+    <>
+      <div className="mb-1 relative">
+        <input
+          ref={radioInputRef}
+          className={classNames(styles["radio-input"])}
+          type="radio"
+          id={`radio-input-${name}-${value}`}
+          name={name}
+          value={value}
+          onChange={onChange}
+          checked={checked}
+        />
+        <span
+          onClick={onClickHandler}
+          className={classNames(
+            styles["custom-radio-input"],
+            checked && styles["is-checked"],
+            checked ? "bg-primary" : "bg-black"
+          )}
+        />
+      </div>
+    </>
   );
 };

@@ -6,6 +6,13 @@ export default {
       fontFamily: {
         sans: ["Montserrat", "sans-serif"],
       },
+      colors: {
+        primary: "#1aa17b",
+        light: "#727272",
+      },
+      zIndex: {
+        999: "999",
+      },
     },
   },
   plugins: [],

@@ -24,11 +24,16 @@ const defaultInputValues: InputValues = {
 
 export const SubscribeForm = () => {
   const [inputValues, set_inputValues] = useState<InputValues>(defaultInputValues);
+  const [isTOSAccepted, set_isTOSAccepted] = useState(false);
 
   const onInputValueChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.currentTarget;
 
     set_inputValues((prevState) => ({ ...prevState, [name]: value }));
+  };
+
+  const onTOSAcceptedChangeHandler = () => {
+    set_isTOSAccepted(!isTOSAccepted);
   };
 
   const onSubmitHandler = () => {};
@@ -70,13 +75,17 @@ export const SubscribeForm = () => {
           value={inputValues.firstAndLastName}
           onChange={onInputValueChangeHandler}
         />
-        <label className="flex justify-start gap-3 text-sm text-white">
-          <Checkbox className="self-start mt-1" />
-          <p>
+        <div className="flex justify-start gap-3">
+          <Checkbox
+            className="self-start mt-1"
+            checked={isTOSAccepted}
+            onChange={onTOSAcceptedChangeHandler}
+          />
+          <p className="text-sm text-white">
             By clicking the “Start Paid Membership” button below, you agree to our Terms of Use and
             that you are over 18 and acknowledge the Privacy Statement.
           </p>
-        </label>
+        </div>
       </Form>
     </>
   );
