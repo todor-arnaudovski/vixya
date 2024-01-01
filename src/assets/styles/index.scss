@@ -41,6 +41,10 @@
   border-bottom: 1px solid $light-color;
 }
 
+.border-top-white {
+  border-top: 1px solid #fff;
+}
+
 .bg-gradient-primary {
   background: $gradient-primary;
 }
@@ -102,4 +106,38 @@ input:focus {
   outline: none;
   box-shadow: 0 0 3px 5px rgba($primary-color, 0.5);
   transition: box-shadow 0.15s ease-out;
+}
+
+.bg-gradient-black {
+  position: relative;
+
+  & > * {
+    position: relative;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgb(0, 0, 0);
+    background: -moz-linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.5046393557422969) 0%,
+      rgba(136, 136, 136, 0) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    background: -webkit-linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.5046393557422969) 0%,
+      rgba(136, 136, 136, 0) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.5046393557422969) 0%,
+      rgba(136, 136, 136, 0) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#ffffff",GradientType=1);
+  }
 }

@@ -66,6 +66,10 @@ export const SetupPage = () => {
     }
   };
 
+  const onFinishHandler = () => {
+    navigate(`${import.meta.env.BASE_URL}home` || "home");
+  };
+
   const setisNextDisabledHandler = (isDisaled: boolean) => {
     set_isNextDisabled(isDisaled);
   };
@@ -94,7 +98,7 @@ export const SetupPage = () => {
           </div>
         ) : (
           <div className="mb-20">
-            <Button onClick={onNextStepHandler}>Започни</Button>
+            <Button onClick={onFinishHandler}>Започни</Button>
           </div>
         )}
       </div>

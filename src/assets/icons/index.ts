@@ -5,3 +5,8 @@ export * from "./IconMale.tsx";
 export * from "./IconMinus.tsx";
 export * from "./IconPlus.tsx";
 export * from "./IconCheckmark.tsx";
+export * from "./IconSearch.tsx";
+export * from "./IconHome.tsx";
+export * from "./IconTraining.tsx";
+export * from "./IconProgress.tsx";
+export * from "./IconProfile.tsx";
